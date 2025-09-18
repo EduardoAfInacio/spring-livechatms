@@ -1,4 +1,4 @@
 package com.eduardoinacio.spring_livechatms.domain;
 
-public record ChatInput(String username, String message) {
+public record ChatInput(String user, String message) {
 }
