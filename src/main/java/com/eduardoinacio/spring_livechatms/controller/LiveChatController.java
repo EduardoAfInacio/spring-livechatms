@@ -12,7 +12,7 @@ public class LiveChatController {
     @MessageMapping("/new-message")
     @SendTo("/topic/livechat")
     public ChatOutput newMessage(ChatInput chatInput) {
-        String message = HtmlUtils.htmlEscape(chatInput.username() + ": " + chatInput.message());
+        String message = HtmlUtils.htmlEscape(chatInput.user() + ": " + chatInput.message());
         return new ChatOutput(message);
     }
 }
